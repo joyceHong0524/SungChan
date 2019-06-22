@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/black"
-        android:text="성찬."
+        android:text="@string/app_name_kr"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,8 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/black"
-        android:text="누구나 요리사가
-될 수 있습니다."
+        android:text="@string/splash"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"

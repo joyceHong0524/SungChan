@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SungChan</string>
+    <string name="app_name_kr">성찬.</string>
+    <string name="choice">무엇을\n찾고 있나요?</string>
+    <string name="splash">누구나 요리사가 될 수 있는\n세상을 엽니다.</string>
+    <string name="customer">나만의\n요리사를 고용하고 싶어요</string>
+    <string name="chef">나의 요리실력을\n고용해 줄 사람을 찾고 있어요</string>
 </resources>

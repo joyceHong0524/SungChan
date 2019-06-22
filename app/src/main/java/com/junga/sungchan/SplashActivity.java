@@ -8,6 +8,8 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
+    private static final String TAG = "SplashActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

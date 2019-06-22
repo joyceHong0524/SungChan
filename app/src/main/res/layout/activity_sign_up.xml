@@ -30,9 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:fontFamily="@font/black"
-        android:text="성찬"
+        android:text="@string/app_name_kr"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
