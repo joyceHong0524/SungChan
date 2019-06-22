@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_choice.*
@@ -29,10 +28,17 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
             editor = pref.edit()
             editor.putInt("type", 0)
             editor.commit()
+            val intent: Intent = Intent(this, TellMeActivity::class.java)
+            intent.putExtra("type", CUSTOMER)
+            startActivity(intent)
+
         } else if (view.id == R.id.chef_btn) {
             editor = pref.edit()
-            editor.putInt("type", 0)
+            editor.putInt("type", 1)
             editor.commit()
+            val intent: Intent = Intent(this, TellMeActivity::class.java)
+            intent.putExtra("type", CHEF)
+            startActivity(intent)
 
         }
     }

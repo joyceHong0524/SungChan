@@ -120,11 +120,13 @@
     <color name="medium_turquoise">#48D1CC</color>
     <color name="dark_slate_blue">#483D8B</color>
     <color name="steel_blue">#4682B4</color>
+    <color name="light_black">#292929</color>
     <color name="royal_blue">#4169E1</color>
     <color name="turquoise">#40E0D0</color>
     <color name="medium_sea_green">#3CB371</color>
     <color name="lime_green">#32CD32</color>
     <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="transparent">#00FFFFFF</color>
     <color name="sea_green">#2E8B57</color>
     <color name="forest_green">#228B22</color>
     <color name="light_sea_green">#20B2AA</color>

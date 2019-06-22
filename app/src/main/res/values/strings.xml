@@ -5,4 +5,8 @@
     <string name="splash">누구나 요리사가 될 수 있는\n세상을 엽니다.</string>
     <string name="customer">나만의\n요리사를 고용하고 싶어요</string>
     <string name="chef">나의 요리실력을\n고용해 줄 사람을 찾고 있어요</string>
+    <string name="tellme_customer">당신의\n취향을\n알려주세요</string>
+    <string name="tellme_chef">당신의\n요리를\n알려주세요</string>
+    <string name="continue_btn">계 속 하 기</string>
+    <string name="pass_btn">건 너 뛰 기</string>
 </resources>
