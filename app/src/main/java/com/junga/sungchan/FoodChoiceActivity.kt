@@ -56,7 +56,10 @@ class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 editor = pref.edit()
 
+
+
                 val set = HashSet<String>()
+
                 set.addAll(foodList)
 //                for (a in set){
 //                    Log.d(TAG,"It is in the set -----> $a");

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_parent">
+
+
+    <Button
+        android:id="@+id/keep_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/continue_btn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="219dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_right_bg"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/black"
+        android:text="@string/whichtaste_customer"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <GridLayout
+        android:id="@+id/textGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="4"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <Button
+            android:id="@+id/spicy_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="안 매움"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/spicy_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="보통 매움"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/spicy_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="아주 매움"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/salty_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="싱거움"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/salty_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="보통 "
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/salty_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="매우 짭잘"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/oily_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="담백함"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/oily_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="부드러움"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/oily_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="느끼함"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/vegi_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="육식파"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/vegi_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="둘다파"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+        <Button
+            android:id="@+id/vegi_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/taste_bg"
+            android:fontFamily="@font/nanum_extrabold"
+            android:scaleType="fitXY"
+            android:text="채식파"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_content_medium" />
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/checkGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="4"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <Button
+            android:id="@+id/check_spicy0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_spicy1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_spicy2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_salty0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_salty1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+
+        <Button
+            android:id="@+id/check_salty2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_oily0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_oily1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_oily2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_vegi0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_vegi1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/check_vegi2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tatste_check_bg"
+            android:scaleType="fitXY"
+            android:textColor="@color/light_black"
+            android:visibility="invisible" />
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

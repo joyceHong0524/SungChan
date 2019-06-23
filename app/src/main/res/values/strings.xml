@@ -9,8 +9,13 @@
     <string name="tellme_chef">당신의\n요리를\n알려주세요</string>
     <string name="continue_btn">계 속 하 기  \t></string>
     <string name="pass_btn">건 너 뛰 기</string>
+
+
     <string name="whichfood_customer">어떤\n요리를\n먹고싶나요?</string>
     <string name="whichfood_cherf">무슨 요리에\n자신이 있나요?</string>
+    <string name="whichtaste_customer">평소에\n어떻게\n드시나요?</string>
+    <string name="whichtaste_chef">평소에\n어떻게\n요리하시나요?</string>
+
     <string name="korean">한식</string>
     <string name="italian">양식</string>
     <string name="bunsik">분식</string>
