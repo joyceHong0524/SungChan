@@ -4,6 +4,424 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FoodChoiceActivity">
+    tools:context=".FoodChoiceActivity"
+    android:id="@+id/layout_parent">
 
+    <Button
+        android:id="@+id/keep_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/nanum_bold"
+        android:text="@string/continue_btn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="219dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_right_bg"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/black"
+        android:text="@string/whichfood_customer"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="( 2 / 3 )"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <GridLayout
+        android:id="@+id/imageGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/korean_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/bansang_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/italian_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/chinese_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/japanese_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/bunsik_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/snack_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/healthy_img" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/baby_img" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/textGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <TextView
+            android:id="@+id/koreanT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/korean"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/bansangT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/bansang"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/italianT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/italian"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/chineseT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/chinese"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/japaneseT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/japanese"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/bunsikT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/bunsik"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/snackT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/snack"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/healthyT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/healthy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+
+        <TextView
+            android:id="@+id/babyT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:shadowColor="@color/midnight_blue"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/baby"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_medium" />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/checkGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <ImageView
+            android:id="@+id/korean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/bansang"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/italian"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/chinese"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/japanese"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/bunsik"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/snack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/healthy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/baby"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/food_checked_bg"
+            android:visibility="invisible" />
+
+    </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
