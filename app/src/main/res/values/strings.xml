@@ -15,6 +15,9 @@
     <string name="whichfood_cherf">무슨 요리에\n자신이 있나요?</string>
     <string name="whichtaste_customer">평소에\n어떻게\n드시나요?</string>
     <string name="whichtaste_chef">평소에\n어떻게\n요리하시나요?</string>
+    <string name="choice_all">*4영역 모두 선택해 주세요</string>
+    <string name="choice_maximum">*최대 3개까지 선택 가능</string>
+
 
     <string name="korean">한식</string>
     <string name="italian">양식</string>

@@ -24,9 +24,9 @@ public class TellMeActivity extends AppCompatActivity implements View.OnClickLis
         Button keep_btn = findViewById(R.id.keep_btn);
         TextView textView = findViewById(R.id.main_textview);
 
-        if( type==ChoiceActivity.Companion.getCUSTOMER$app()){
+        if( type==ChoiceActivity.Companion.getCUSTOMER()){
             textView.setText(R.string.tellme_customer);
-        }else if ( type ==ChoiceActivity.Companion.getCHEF$app()){
+        }else if ( type ==ChoiceActivity.Companion.getCHEF()){
             textView.setText(R.string.tellme_chef);
         }
 

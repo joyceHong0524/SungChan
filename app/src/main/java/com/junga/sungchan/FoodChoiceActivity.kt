@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_food_choice.*
+import org.jetbrains.anko.startActivity
 
 class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -56,8 +57,6 @@ class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 editor = pref.edit()
 
-
-
                 val set = HashSet<String>()
 
                 set.addAll(foodList)
@@ -66,6 +65,9 @@ class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
 //                }
                 editor.putStringSet("favfoods", set)
                 editor.commit()
+
+                startActivity<TasteChoiceActivity>()
+
 
             }
             R.id.koreanT -> {

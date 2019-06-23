@@ -50,7 +50,7 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
         // 0 : Customer
         // 1 : Chef
 
-        internal val CUSTOMER = 0
-        internal val CHEF = 1
+        val CUSTOMER = 0
+        val CHEF = 1
     }
 }
