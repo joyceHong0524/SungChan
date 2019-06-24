@@ -8,6 +8,7 @@ import android.view.View
 
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_choice.*
+import org.jetbrains.anko.startActivity
 
 class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -28,17 +29,14 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
             editor = pref.edit()
             editor.putInt("type", 0)
             editor.commit()
-            val intent: Intent = Intent(this, TellMeActivity::class.java)
-            intent.putExtra("type", CUSTOMER)
-            startActivity(intent)
+            startActivity<TellMeActivity>("type" to 0)
 
         } else if (view.id == R.id.chef_btn) {
             editor = pref.edit()
             editor.putInt("type", 1)
             editor.commit()
-            val intent: Intent = Intent(this, TellMeActivity::class.java)
-            intent.putExtra("type", CHEF)
-            startActivity(intent)
+            startActivity<TellMeActivity>("type" to 1)
+
 
         }
     }

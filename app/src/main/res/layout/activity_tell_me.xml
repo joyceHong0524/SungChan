@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:text="@string/tellme_customer"
         android:fontFamily="@font/black"
-        android:textColor="@color/light_black"
+        android:textColor="@color/black"
         android:textSize="@dimen/text_title"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"

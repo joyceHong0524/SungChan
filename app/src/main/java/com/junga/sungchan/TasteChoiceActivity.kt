@@ -57,9 +57,6 @@ class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
                     Log.d(TAG,a)
                 }
 
-                Log.d(TAG,"successfully done")
-
-
             }
             R.id.spicy_0,R.id.spicy_1 ,R.id.spicy_2 ,R.id.check_spicy0,
             R.id.check_spicy1 ,R.id.check_spicy2,
@@ -78,6 +75,14 @@ class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
         setContentView(R.layout.activity_taste_choice)
 
         pref = getSharedPreferences("user", Context.MODE_PRIVATE)
+        val type = pref.getInt("type",0)
+
+        when(type){
+            0 -> textView9.setText(R.string.whichtaste_customer)
+            1 -> textView9.setText(R.string.whichtaste_chef)
+        }
+
+
 
         keep_btn.setOnClickListener(this)
         spicy_0.setOnClickListener(this)

@@ -105,6 +105,12 @@ class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_food_choice)
 
         pref = getSharedPreferences("user", Context.MODE_PRIVATE)
+        val type = pref.getInt("type",-1)
+
+        when (type){
+            0 -> textView9.setText(R.string.whichfood_customer)
+            1 -> textView9.setText(R.string.whichfood_cherf)
+        }
 
         keep_btn.setOnClickListener(this)
 
