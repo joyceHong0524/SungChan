@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="110dp"
     android:background="@drawable/row_bg"
     android:orientation="horizontal"
     android:padding="10dp"
@@ -11,7 +11,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="91dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/korean_img"
@@ -34,26 +34,41 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/nanum_extrabold"
-        android:text="김 미애님"
+        android:text="김 미애님께서 수락 하셨습니다."
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nanum_extrabold"
-        android:text="된장국, 나물, 따듯한 집밥"
+        android:text="3 분전"
         android:textColor="@color/grey"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nanum_extrabold"
+        android:text="3명 오늘 오후 5시"
+        android:textColor="@color/grey"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -62,80 +77,32 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/textView11">
-
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="6dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/star_icon" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:fontFamily="@font/nanum_extrabold"
-            android:text="4.9"
-            android:textSize="11sp" />
-
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="6dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/place_holder" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:fontFamily="@font/nanum_extrabold"
-            android:text="200m"
-            android:textSize="11sp" />
-
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="6dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/edit_icon" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanum_extrabold"
-            android:text="50+개"
-            android:textSize="11sp" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView11"/>
 
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="44dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline12">
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintStart_toEndOf="@+id/textView23">
 
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="6dp"
             android:scaleType="fitXY"
-            android:src="@drawable/clock_icon" />
+            android:src="@drawable/phone_icon" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
-            android:text="예상 고용 시간: 1시간 반"
-            android:textSize="11sp" />
+            android:text="연락하기"
+            android:textSize="13sp" />
 
     </LinearLayout>
 
