@@ -11,7 +11,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="0dp"
-        android:layout_height="91dp"
+        android:layout_height="0dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/korean_img"
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="121dp" />
+        app:layout_constraintGuide_begin="95dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -83,10 +83,11 @@
         android:id="@+id/layout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView23"
-        app:layout_constraintStart_toEndOf="@+id/textView23">
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
 
         <ImageView
             android:layout_width="18dp"

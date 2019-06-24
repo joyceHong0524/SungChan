@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() ,BottomNavigation.OnMenuItemSelectionLi
 
     override fun onMenuItemSelect(itemId: Int, position: Int, fromUser: Boolean) {
         when(position){
-            0 -> fm.beginTransaction().replace(R.id.container,ChefListFragment()).commit()
+            0 ->  fm.beginTransaction().replace(R.id.container,ChefListFragment()).commit()
             1 ->  fm.beginTransaction().replace(R.id.container,ChefInfoFragment()).commit()
-            2->fm.beginTransaction().replace(R.id.container,MyMessageFragment()).commit()
+            2->   fm.beginTransaction().replace(R.id.container,MyMessageFragment()).commit()
         }
 
     }
