@@ -1,17 +1,20 @@
 package com.junga.sungchan
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_chef_list.*
 
 
-class ChefListFragment : Fragment() {
+@SuppressLint("ValidFragment")
+class ChefListFragment(val fm: FragmentManager) : Fragment() {
 
     private lateinit var adapter: ChefListAdapter
     private lateinit var layoutManager: RecyclerView.LayoutManager
@@ -34,7 +37,7 @@ class ChefListFragment : Fragment() {
             // RecyclerView behavior
             layoutManager = LinearLayoutManager(activity)
             // set the custom adapter to the RecyclerView
-            adapter = ChefListAdapter(context!!)
+            adapter = ChefListAdapter(context!!,fm)
         }
 
         address.text = "역삼동 624-17"

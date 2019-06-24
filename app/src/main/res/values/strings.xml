@@ -17,7 +17,8 @@
     <string name="whichtaste_chef">평소에\n어떻게\n요리하시나요?</string>
     <string name="choice_all">*4영역 모두 선택해 주세요</string>
     <string name="choice_maximum">*최대 3개까지 선택 가능</string>
-
+    <string name="dummy_info">저는 3년째 성찬에서 보양식을 전문으로해온 성순자라고합니다. 고객님들이 맛있게 먹어주는 것이 저에게는 큰 행복입니다. 전복찜, 갈비찜 일단 전화주십시오</string>
+    <string name="dummy_food">갈비찜, 갈비탕, 삼계탕, 초계탕, 전복찜, 그 외 모든 보양식 가능</string>
 
     <string name="korean">한식</string>
     <string name="italian">양식</string>
@@ -28,6 +29,12 @@
     <string name="chinese">중식</string>
     <string name="japanese">일식</string>
     <string name="bansang">7첩반상</string>
+
+
+    <string name="completed_costomer">성공적으로\n요청을\n전달했습니다.</string>
+    <string name="completed_info_costomer">고용이 확정되면\n알림으로 알려드리겠습니다.</string>
+    <string name="completed_chef">성공적으로\n정보를\n등록했습니다.</string>
+    <string name="completed_info_chef">고용 요청이 있으면\n알림으로 알려드리겠습니다.</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
