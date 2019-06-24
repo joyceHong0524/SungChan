@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_taste_choice.*
+import org.jetbrains.anko.startActivity
 
 class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
 
@@ -56,6 +57,7 @@ class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
                 for(a in set){
                     Log.d(TAG,a)
                 }
+                startActivity<MainActivity>()
 
             }
             R.id.spicy_0,R.id.spicy_1 ,R.id.spicy_2 ,R.id.check_spicy0,

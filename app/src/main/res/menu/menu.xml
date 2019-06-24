@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    app:bbn_badgeColor="#FFFF0000"
+    app:bbn_rippleColor="#33ffffff">
+    <item
+        android:id="@+id/home"
+        android:color="@color/colorPrimary"
+        android:icon="@drawable/home_icon"
+        android:title="홈" />
+    <item
+        android:id="@+id/hire"
+        android:color="@color/orange"
+        android:icon="@drawable/paper_icon"
+        android:title="고용 현황" />
+    <item
+        android:id="@+id/message"
+        android:color="@android:color/holo_orange_dark"
+        android:icon="@drawable/email_icon"
+        android:title="메시지" />
+    <item
+        android:id="@+id/mypage"
+        android:color="@color/salmon"
+        android:icon="@drawable/person_icon"
+        android:title="마이페이지" />
+</menu>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+        <!--<item-->
+            <!--android:id="@+id/hehe"-->
+            <!--android:icon="@drawable/home_icon"-->
+            <!--android:title=""-->
+            <!--/>-->
+
+        <!--<item-->
+            <!--android:id="@+id/navigation_albums"-->
+            <!--android:icon="@drawable/paper_icon"-->
+            <!--android:title=""/>-->
+
+        <!--<item-->
+            <!--android:id="@+id/navigation_artists"-->
+            <!--android:icon="@drawable/email_icon"-->
+            <!--android:title=""/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/mypage"-->
+        <!--android:icon="@drawable/person_icon"-->
+        <!--android:title=""/>-->
+
+
+<!--</menu>-->
