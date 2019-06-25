@@ -15,6 +15,7 @@ import org.jetbrains.anko.toolbar
 class MainActivity : AppCompatActivity() ,BottomNavigation.OnMenuItemSelectionListener {
 
     val fm = supportFragmentManager
+
     override fun onMenuItemReselect(itemId: Int, position: Int, fromUser: Boolean) {
 
 
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() ,BottomNavigation.OnMenuItemSelectionLi
     override fun onMenuItemSelect(itemId: Int, position: Int, fromUser: Boolean) {
         when(position){
             0 ->  fm.beginTransaction().replace(R.id.container,ChefListFragment()).commit()
-            1 ->  fm.beginTransaction().replace(R.id.container,ChefInfoFragment()).commit()
+            1 ->  fm.beginTransaction().replace(R.id.container,HiredFragment()).commit()
             2->   fm.beginTransaction().replace(R.id.container,MyMessageFragment()).commit()
         }
 
@@ -35,16 +36,19 @@ class MainActivity : AppCompatActivity() ,BottomNavigation.OnMenuItemSelectionLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (savedInstanceState == null) {
-            val fragment = ChefListFragment()
-            fm.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
-                    .commit()
+
+        val type = getSharedPreferences("user",0).getInt("type",0)
+        when(type){
+            0 -> {
+                val fragment = ChefListFragment()
+                fm.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.getSimpleName())
+                        .commit()
+            }
+            1 -> {
+                val fragment = CompletedFragment()
+                fm.beginTransaction().replace(R.id.container,fragment,fragment.javaClass.simpleName).commit()
+            }
         }
-
-
-        val fragmentTx = fm.beginTransaction()
-        fragmentTx.replace(R.id.container, ChefListFragment())
-        fragmentTx.commit();
 
         //여기서 menuItemSelectionListener를 재 정의해 주는 것이다.
         bottom_navigation.menuItemSelectionListener = this

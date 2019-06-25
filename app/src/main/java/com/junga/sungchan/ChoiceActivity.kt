@@ -28,14 +28,14 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
         if (view.id == R.id.customer_btn) {
             editor = pref.edit()
             editor.putInt("type", 0)
-            editor.commit()
-            startActivity<TellMeActivity>("type" to 0)
+            editor.apply()
+            startActivity<TellMeActivity>()
 
         } else if (view.id == R.id.chef_btn) {
             editor = pref.edit()
             editor.putInt("type", 1)
-            editor.commit()
-            startActivity<TellMeActivity>("type" to 1)
+            editor.apply()
+            startActivity<TellMeActivity>()
 
 
         }

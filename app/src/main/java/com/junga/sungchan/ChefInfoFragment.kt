@@ -24,7 +24,7 @@ class ChefInfoFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         request_btn.setOnClickListener(View.OnClickListener {
-            var dialog = AlertDialog.Builder(mContext)
+            val dialog = AlertDialog.Builder(mContext)
             dialog.setMessage("고용 신청 메시지를 보내시겠습니까?")
                     .setCancelable(false)
                     .setPositiveButton("확인",DialogInterface.OnClickListener { dialogInterface, i ->
@@ -36,7 +36,6 @@ class ChefInfoFragment : Fragment(){
                     })
 
             val alert = dialog.create()
-
             alert.show()
 
         })

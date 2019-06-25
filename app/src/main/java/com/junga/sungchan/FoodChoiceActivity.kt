@@ -64,7 +64,7 @@ class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
 //                    Log.d(TAG,"It is in the set -----> $a");
 //                }
                 editor.putStringSet("favfoods", set)
-                editor.commit()
+                editor.apply()
 
                 startActivity<TasteChoiceActivity>()
 

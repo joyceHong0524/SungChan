@@ -20,7 +20,6 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(SplashActivity.this, SignUpActivity.class);
                 startActivity(intent);
-                //TODO : Adding an animation when activity changes.
             }
         },2000);
     }

@@ -37,7 +37,7 @@ class ChefListFragment() : Fragment() {
         recycler_view.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = LinearLayoutManager(mContext)
             // set the custom adapter to the RecyclerView
             adapter = ChefListAdapter(context!!,mFragmentManager)
         }

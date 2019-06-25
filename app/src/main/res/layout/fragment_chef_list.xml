@@ -5,14 +5,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <TextView
     android:id="@+id/address"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
     android:text="역삼동 624-17"
-    android:fontFamily="@font/black"
-    android:gravity="center_horizontal"
-    android:padding="10dp"
-    android:textSize="20sp"
-    android:layout_marginBottom="10dp"/>
+    android:background="@drawable/address_bg"
+    android:fontFamily="@font/nanum_extrabold"
+    android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:textSize="15sp"
+        android:paddingBottom="3dp"
+    android:layout_marginBottom="14dp"/>
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"

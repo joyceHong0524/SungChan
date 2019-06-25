@@ -2,12 +2,14 @@
     <string name="app_name">SungChan</string>
     <string name="app_name_kr">성찬.</string>
     <string name="choice">무엇을\n찾고 있나요?</string>
-    <string name="splash">누구나 요리사가 될 수 있는\n세상을 엽니다.</string>
+    <string name="splash">누구나 요리사가\n될 수 있는\n세상을 엽니다.</string>
     <string name="customer">나만의\n요리사를 고용하고 싶어요</string>
     <string name="chef">나의 요리실력을\n고용해 줄 사람을 찾고 있어요</string>
     <string name="tellme_customer">당신의\n취향을\n알려주세요</string>
     <string name="tellme_chef">당신의\n요리를\n알려주세요</string>
     <string name="continue_btn">계 속 하 기  \t></string>
+    <string name="end_btn">끝 내 기  \t></string>
+
     <string name="pass_btn">건 너 뛰 기</string>
 
 
@@ -40,6 +42,9 @@
     <string name="my_hire">고용\n현황</string>
     <string name="chef_message_dummy">&quot;친구들이랑 간단히 브런치 하려구요~&quot;</string>
     <string name="address_dummy">주소 : 서울 역삼동 624&#8211;17 201호</string>
+    <string name="introduce_your_kitchen">당신의\n주방을\n소개해 주세요</string>
+    <string name="registlation_in_process_chef">고객님의 정보를\n등록 중입니다.</string>
+    <string name="registlation_in_process_customer">고객님의\n취향 분석 중..</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

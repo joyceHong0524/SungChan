@@ -1,6 +1,7 @@
 package com.junga.sungchan;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +18,8 @@ public class TellMeActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tell_me);
 
-        Intent intent = getIntent();
-        final int type = intent.getIntExtra("type",0);
+        SharedPreferences pref = getSharedPreferences("user",MODE_PRIVATE);
+        int type = pref.getInt("type",0);
 
         Button pass_btn = findViewById(R.id.pass_btn);
         Button keep_btn = findViewById(R.id.keep_btn);
@@ -26,20 +27,23 @@ public class TellMeActivity extends AppCompatActivity implements View.OnClickLis
 
         if( type==ChoiceActivity.Companion.getCUSTOMER()){
             textView.setText(R.string.tellme_customer);
+            pass_btn.setOnClickListener(this);
+            keep_btn.setOnClickListener(this);
+
         }else if ( type ==ChoiceActivity.Companion.getCHEF()){
             textView.setText(R.string.tellme_chef);
+            keep_btn.setOnClickListener(this);
+            pass_btn.setVisibility(View.INVISIBLE);
+
         }
-
-        pass_btn.setOnClickListener(this);
-        keep_btn.setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View view) {
 
         if (view.getId() == R.id.pass_btn) {
-            //TODO : Go to 1-3-1 page right away.
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
         } else if (view.getId() == R.id.keep_btn) {
             Intent intent = new Intent(this, FoodChoiceActivity.class);
             startActivity(intent);

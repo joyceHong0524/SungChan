@@ -33,6 +33,7 @@ class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
     private lateinit var  pref : SharedPreferences;
     private lateinit var  editor: SharedPreferences.Editor;
     private var tasteList = arrayOf("","","","")
+    var type : Int =0
 
     override fun onClick(p0: View) {
 
@@ -57,7 +58,11 @@ class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
                 for(a in set){
                     Log.d(TAG,a)
                 }
-                startActivity<MainActivity>()
+
+                when(type) {
+                    0 -> startActivity<LoadingActivity>()
+                    1 -> startActivity<KitchenRegislation>()
+                }
 
             }
             R.id.spicy_0,R.id.spicy_1 ,R.id.spicy_2 ,R.id.check_spicy0,
@@ -77,7 +82,7 @@ class TasteChoiceActivity: AppCompatActivity() , View.OnClickListener{
         setContentView(R.layout.activity_taste_choice)
 
         pref = getSharedPreferences("user", Context.MODE_PRIVATE)
-        val type = pref.getInt("type",0)
+        type = pref.getInt("type",0)
 
         when(type){
             0 -> textView9.setText(R.string.whichtaste_customer)
