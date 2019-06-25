@@ -44,9 +44,11 @@ public class TellMeActivity extends AppCompatActivity implements View.OnClickLis
         if (view.getId() == R.id.pass_btn) {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         } else if (view.getId() == R.id.keep_btn) {
             Intent intent = new Intent(this, FoodChoiceActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
     }
 }

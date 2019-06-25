@@ -67,6 +67,7 @@ class FoodChoiceActivity : AppCompatActivity(), View.OnClickListener {
                 editor.apply()
 
                 startActivity<TasteChoiceActivity>()
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
 
             }

@@ -3,7 +3,6 @@ package com.junga.sungchan;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.service.autofill.UserData;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,7 +29,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        pref = getSharedPreferences("user",MODE_PRIVATE);
+        pref = getSharedPreferences("user", MODE_PRIVATE);
 
         nickName_edt = findViewById(R.id.nickname_edt);
         email_edt = findViewById(R.id.email_edt);
@@ -48,7 +47,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void signUp(){
+    private void signUp() {
         //TODO Maybe It would be easier just using firebase authentication..?]
 
         String nickName = nickName_edt.getText().toString();
@@ -58,17 +57,19 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         editor = pref.edit();
 
-        editor.putString("nickname",nickName);
-        editor.putString("email",email);
-        editor.putString("password",password);
-        editor.putString("phonenumber",phoneNumber);
+        editor.putString("nickname", nickName);
+        editor.putString("email", email);
+        editor.putString("password", password);
+        editor.putString("phonenumber", phoneNumber);
 
         editor.commit();
 
-        Log.d(TAG, "signUp: User " +nickName+" has been signed up");
+        Log.d(TAG, "signUp: User " + nickName + " has been signed up");
 
         Intent intent = new Intent(SignUpActivity.this, ChoiceActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
 
     }
 }

@@ -14,6 +14,7 @@
     android:id="@+id/cardview">
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
@@ -35,7 +36,7 @@
         app:layout_constraintGuide_begin="95dp" />
 
     <TextView
-        android:id="@+id/kitchenName"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,7 +73,7 @@
         android:textColor="@color/grey"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/kitchenName" />
+        app:layout_constraintTop_toBottomOf="@+id/text" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -81,17 +82,16 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/kitchenName"/>
+        app:layout_constraintTop_toBottomOf="@+id/text"/>
 
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/kitchenName">
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
 
         <ImageView
             android:layout_width="18dp"
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
-            android:text="연락하기"
+            android:text="연락하기 : 010 - 2938 -4492"
             android:textSize="13sp" />
 
     </LinearLayout>

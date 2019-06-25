@@ -1,11 +1,9 @@
 package com.junga.sungchan
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_choice.*
 import org.jetbrains.anko.startActivity
@@ -30,12 +28,15 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
             editor.putInt("type", 0)
             editor.apply()
             startActivity<TellMeActivity>()
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+
 
         } else if (view.id == R.id.chef_btn) {
             editor = pref.edit()
             editor.putInt("type", 1)
             editor.apply()
             startActivity<TellMeActivity>()
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
 
         }

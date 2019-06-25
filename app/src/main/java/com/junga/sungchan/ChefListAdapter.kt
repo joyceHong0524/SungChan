@@ -62,7 +62,7 @@ class ChefListAdapter(val context: Context, val fragmentManager: FragmentManager
         holder.estimatedTime.setText(estimatedTime)
         holder.rate.setText(rate)
 
-        when(position%5){
+        when (position % 5) {
             0 -> Glide.with(context).load(R.drawable.gaejang_list).into(holder.image)
             1 -> Glide.with(context).load(R.drawable.samgetang_list).into(holder.image)
             2 -> Glide.with(context).load(R.drawable.healthy_list).into(holder.image)
@@ -77,7 +77,7 @@ class ChefListAdapter(val context: Context, val fragmentManager: FragmentManager
         val image = view.image
         val cardview = view.cardview
         val chefName = view.chefName
-        val kitchenName = view.kitchenName
+        val kitchenName = view.text
         val rate = view.rate
         val distance = view.distance
         val mainFood = view.mainFood

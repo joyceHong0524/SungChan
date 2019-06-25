@@ -1,13 +1,12 @@
 package com.junga.sungchan
 
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +24,7 @@ class ChefListFragment() : Fragment() {
         super.onCreate(savedInstanceState)
 
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_chef_list, container, false)
@@ -39,7 +39,7 @@ class ChefListFragment() : Fragment() {
             // RecyclerView behavior
             layoutManager = LinearLayoutManager(mContext)
             // set the custom adapter to the RecyclerView
-            adapter = ChefListAdapter(context!!,mFragmentManager)
+            adapter = ChefListAdapter(context!!, mFragmentManager)
         }
 
         address.text = "역삼동 624-17"

@@ -1,35 +1,35 @@
 package com.junga.sungchan
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.content.Context
+import android.content.DialogInterface
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragemtn_chef_info.*
-import android.app.Activity
-import android.app.AlertDialog
-import android.app.Dialog
-import android.content.Context
-import android.content.DialogInterface
-import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
-import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragemtn_chef_info.*
 import kotlinx.android.synthetic.main.fragemtn_chef_info.view.*
 
 
 @SuppressLint("ValidFragment")
-class ChefInfoFragment(val position:Int) : Fragment(){
+class ChefInfoFragment(val position: Int) : Fragment() {
+
+    interface BadgeChangeListener {
+        fun badgeChange()
+    }
 
 
-
-
-
+    var badgeChangeListener: BadgeChangeListener? = null
     val chefList = ChefListAdapter.Companion.cheflist
 
     var mContext: Context? = null
-    var mFragmentManager : FragmentManager? = null
+    var mFragmentManager: FragmentManager? = null
+    var pref: SharedPreferences? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -37,11 +37,16 @@ class ChefInfoFragment(val position:Int) : Fragment(){
             val dialog = AlertDialog.Builder(mContext)
             dialog.setMessage("고용 신청 메시지를 보내시겠습니까?")
                     .setCancelable(false)
-                    .setPositiveButton("확인",DialogInterface.OnClickListener { dialogInterface, i ->
-                        mFragmentManager!!.beginTransaction().replace(R.id.container,CompletedFragment()).commit()
+                    .setPositiveButton("확인", DialogInterface.OnClickListener { dialogInterface, i ->
+                        mFragmentManager!!.beginTransaction().replace(R.id.container, CompletedFragment()).commit()
+                        badgeChangeListener!!.badgeChange()
+                        //This position represents which index has data.
+                        pref!!.edit().putInt("send_request_position", position).apply()
+
+
                         dialogInterface.cancel()
                     })
-                    .setNegativeButton("취소",DialogInterface.OnClickListener { dialogInterface, i ->
+                    .setNegativeButton("취소", DialogInterface.OnClickListener { dialogInterface, i ->
                         dialogInterface.cancel()
                     })
 
@@ -53,10 +58,8 @@ class ChefInfoFragment(val position:Int) : Fragment(){
     }
 
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = layoutInflater.inflate(R.layout.fragemtn_chef_info,container,false);
+        var view = layoutInflater.inflate(R.layout.fragemtn_chef_info, container, false);
 
         val data = chefList.get(position)
 
@@ -75,7 +78,7 @@ class ChefInfoFragment(val position:Int) : Fragment(){
         view.attr2.setText(data.attr2)
         view.attr3.setText(data.attr3)
 
-        when(position%5){
+        when (position % 5) {
             0 -> Glide.with(mContext!!).load(R.drawable.gaejang_list).into(view.image)
             1 -> Glide.with(mContext!!).load(R.drawable.samgetang_list).into(view.image)
             2 -> Glide.with(mContext!!).load(R.drawable.healthy_list).into(view.image)
@@ -90,5 +93,12 @@ class ChefInfoFragment(val position:Int) : Fragment(){
         super.onAttach(context)
         mContext = context
         mFragmentManager = fragmentManager
+        pref = context.getSharedPreferences("user", 0)
+
+        if (context is BadgeChangeListener) {
+            badgeChangeListener = context
+        }
+
+
     }
 }

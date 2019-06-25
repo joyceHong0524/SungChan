@@ -32,7 +32,7 @@
         app:layout_constraintGuide_begin="121dp" />
 
     <TextView
-        android:id="@+id/kitchenName"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -53,8 +53,8 @@
         android:text="김 미애님"
         android:textColor="@color/black"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/kitchenName"
-        app:layout_constraintStart_toEndOf="@+id/kitchenName" />
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintStart_toEndOf="@+id/text" />
 
     <TextView
         android:id="@+id/mainFood"
@@ -75,7 +75,7 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/kitchenName">
+        app:layout_constraintTop_toBottomOf="@+id/text">
 
         <ImageView
             android:layout_width="16dp"
