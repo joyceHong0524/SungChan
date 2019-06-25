@@ -60,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="주방 이름"
                 android:textColor="@color/black"
@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="소개글"
                 android:textColor="@color/black"
@@ -92,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_bg"
                 android:fontFamily="@font/nanum_bold"
                 android:gravity="top|start"
@@ -106,7 +106,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="휴대폰 번호"
                 android:textColor="@color/black"
@@ -126,7 +126,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="주방 사진"
                 android:textColor="@color/black"
@@ -136,6 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
                 android:weightSum="3">
 
                 <ImageView
@@ -168,7 +169,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="냉장고 사진"
                 android:textColor="@color/black"
@@ -178,6 +179,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
                 android:weightSum="3">
 
                 <ImageView
@@ -192,7 +194,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="요리 사진"
                 android:layout_marginTop="10dp"
@@ -203,6 +205,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
                 android:weightSum="3">
 
                 <ImageView
@@ -228,17 +231,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button_bg"
                 android:fontFamily="@font/black"
                 android:paddingStart="40dp"
-                android:paddingTop="10dp"
+                android:paddingTop="5dp"
                 android:paddingEnd="40dp"
+                android:paddingBottom="5dp"
                 android:text="등록 하기"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                tools:paddingBottom="10dp" />
+                 />
         </LinearLayout>
 
     </ScrollView>

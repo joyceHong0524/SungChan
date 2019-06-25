@@ -1,6 +1,8 @@
 package com.junga.sungchan
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +22,21 @@ class MessageListAdapter(val context : Context, val fragmentManager: FragmentMan
                 view = LayoutInflater.from(context).inflate(R.layout.row_customer_message, parent, false)
             } else if (type == 1) {
                 view = LayoutInflater.from(context).inflate(R.layout.row_chef_message, parent, false)
+                view.setOnClickListener(View.OnClickListener {
+                    val dialog = AlertDialog.Builder(context)
+                    dialog.setMessage("고용 신청을 수락 하시겠습니까?")
+                            .setCancelable(false)
+                            .setPositiveButton("확인", DialogInterface.OnClickListener { dialogInterface, i ->
+                                fragmentManager!!.beginTransaction().replace(R.id.container,HiredFragment()).commit()
+                                dialogInterface.cancel()
+                            })
+                            .setNegativeButton("취소", DialogInterface.OnClickListener { dialogInterface, i ->
+                                dialogInterface.cancel()
+                            })
+
+                    val alert = dialog.create()
+                    alert.show()
+                })
             } else {
                 view = LayoutInflater.from(context).inflate(R.layout.row_customer_message, parent, false)
             }

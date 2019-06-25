@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardview"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/row_bg"
     android:orientation="horizontal"
-    android:padding="10dp">
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView"
@@ -36,9 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/nanum_extrabold"
-        android:text="김 수연님께서 고용 요청 하셨습니다."
+        android:text="@string/hire_request"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/layout3"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -104,7 +107,7 @@
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
             android:text="오늘 오후 5시 3시간"
-            android:textSize="13sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
@@ -132,7 +135,7 @@
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
             android:text="3인"
-            android:textSize="13sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
@@ -159,7 +162,7 @@
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
             android:text=" 450m"
-            android:textSize="13sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 

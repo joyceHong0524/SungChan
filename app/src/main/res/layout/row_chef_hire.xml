@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardview"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/row_bg"
     android:orientation="horizontal"
-    android:padding="10dp">
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/girl_img"
         app:civ_border_color="#FF000000"
         app:civ_border_width="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
@@ -35,12 +35,11 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/nanum_extrabold"
         android:text="김 수연님과의 약속"
         android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/layout3"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -49,12 +48,11 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/nanum_extrabold"
         android:text="@string/chef_message_dummy"
         android:textColor="@color/grey"
         android:textSize="9sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView26"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/layout4" />
 
@@ -62,38 +60,51 @@
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/nanum_extrabold"
         android:text="@string/address_dummy"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/request_btn"
+        android:textColor="@color/grey"
+        android:textSize="9sp"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/black"
+        android:text="연락 하기 : 010-1111-2345"
+        android:textColor="@color/white"
+        android:background="@drawable/button_green_bg"
+        android:textSize="10sp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/nanum_extrabold"
         android:text="3 분전"
         android:textColor="@color/grey"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/layout4"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
@@ -111,7 +122,7 @@
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
             android:text="오늘 오후 5시 3시간"
-            android:textSize="13sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
@@ -119,9 +130,8 @@
         android:id="@+id/layout4"
         android:layout_width="0dp"
         android:layout_height="17dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/textView24"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/layout3">
 
@@ -139,7 +149,7 @@
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
             android:text="3인"
-            android:textSize="13sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
@@ -166,40 +176,18 @@
             android:layout_marginEnd="12dp"
             android:fontFamily="@font/nanum_extrabold"
             android:text=" 450m"
-            android:textSize="13sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout10"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/request_btn"
-        app:layout_constraintStart_toEndOf="@+id/request_btn">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/button_green_bg"
-            android:fontFamily="@font/black"
-            android:paddingStart="14dp"
-            android:paddingTop="3dp"
-            android:paddingEnd="14dp"
-            android:paddingBottom="3dp"
-            android:text="연락 하기"
-            android:textColor="@color/white"
             android:textSize="11sp" />
 
-
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/request_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/button_bg"
         android:fontFamily="@font/black"
         android:paddingStart="14dp"
@@ -209,9 +197,10 @@
         android:text="취향 보기"
         android:textColor="@color/white"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
