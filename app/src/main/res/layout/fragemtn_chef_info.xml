@@ -32,7 +32,7 @@
             app:layout_constraintGuide_percent="0.35" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/image"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="fitXY"
@@ -51,7 +51,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@id/guideline13"
             app:layout_constraintRight_toRightOf="@id/guideline14"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
+            app:layout_constraintTop_toBottomOf="@+id/chefName">
 
 
             <ImageView
@@ -63,6 +63,7 @@
                 android:src="@drawable/star_icon" />
 
             <TextView
+                android:id="@+id/rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
@@ -79,6 +80,7 @@
                 android:src="@drawable/place_holder" />
 
             <TextView
+                android:id="@+id/distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
@@ -95,6 +97,7 @@
                 android:src="@drawable/edit_icon" />
 
             <TextView
+                android:id="@+id/numOfReview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_extrabold"
@@ -103,7 +106,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/chefName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -224,14 +227,14 @@
                         android:text="1인"
                         android:textColor="@color/black"
                         />
+
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/onePrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nanum_bold"
                         android:text="12000원"
-                        android:textColor="@color/black"
-                        />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
                 <ImageView
@@ -253,13 +256,14 @@
                         android:text="3-4인"
                         android:textColor="@color/black"
                         />
+
                     <TextView
+                        android:id="@+id/multiplePrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nanum_bold"
                         android:text="32000원"
-                        android:textColor="@color/black"
-                        />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -278,6 +282,7 @@
                 />
 
             <TextView
+                android:id="@+id/introduction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -285,8 +290,7 @@
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/nanum_bold"
                 android:text="@string/dummy_info"
-                android:textSize="12sp"
-                />
+                android:textSize="12sp" />
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
@@ -300,9 +304,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/attr2" />
 
 
-
-
             <TextView
+                android:id="@+id/menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -310,8 +313,7 @@
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/nanum_bold"
                 android:text="@string/dummy_food"
-                android:textSize="12sp"
-                />
+                android:textSize="12sp" />
         </LinearLayout>
 
 

@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import it.sephiroth.android.library.bottomnavigation.BottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toolbar
 
 class MainActivity : AppCompatActivity() ,BottomNavigation.OnMenuItemSelectionListener {
@@ -52,6 +53,12 @@ class MainActivity : AppCompatActivity() ,BottomNavigation.OnMenuItemSelectionLi
 
         //여기서 menuItemSelectionListener를 재 정의해 주는 것이다.
         bottom_navigation.menuItemSelectionListener = this
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        fm.beginTransaction().replace(R.id.container,ChefListFragment(),ChefListFragment().javaClass.simpleName);
+
     }
 
 }
