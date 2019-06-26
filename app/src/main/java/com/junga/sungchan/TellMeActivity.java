@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TellMeActivity extends AppCompatActivity implements View.OnClickListener {
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +33,6 @@ public class TellMeActivity extends AppCompatActivity implements View.OnClickLis
             textView.setText(R.string.tellme_chef);
             keep_btn.setOnClickListener(this);
             pass_btn.setVisibility(View.INVISIBLE);
-
         }
     }
 
